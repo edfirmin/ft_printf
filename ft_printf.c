@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: edilson <edilson@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 14:01:51 by edfirmin          #+#    #+#             */
-/*   Updated: 2023/04/11 17:24:58 by edfirmin         ###   ########.fr       */
+/*   Updated: 2023/04/12 21:41:14 by edilson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,11 @@ int	ft_type(va_list args, const char c)
 		size += ft_printchar(va_arg(args, int));
 	if (c == 's')
 		size += ft_putstr(va_arg(args, char *));
+	if (c == 'p')
+	{
+		size += ft_putstr("0x");
+		size += ft_printhexa_min(va_arg(args, int));
+	}
 	if (c == 'd')
 		size += ft_printnbr(va_arg(args, int));
 	if (c == 'i')
@@ -42,6 +47,8 @@ int	ft_type(va_list args, const char c)
 		size += ft_printnbrus(va_arg(args, unsigned int));
 	if (c == 'x')
 		size += ft_printhexa_min(va_arg(args, int));
+	if (c == 'X')
+		size += ft_printhexa_maj(va_arg(args, int));
 	if (c == '%')
 		size += ft_printchar('%');
 	return (size);
@@ -75,8 +82,10 @@ int	ft_printf(const char *str, ...)
 
 int	main(void)
 {
-	unsigned int	i;
+	int	i;
+	int	s;
 
-	i = 16;
-	printf("\n%d\n",ft_printf("%x Edilson Firmino", i));
+	i = 20155555;
+	s = 667;
+	printf("%%%");
 }
