@@ -3,27 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edilson <edilson@student.42.fr>            +#+  +:+       +#+        */
+/*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 14:01:51 by edfirmin          #+#    #+#             */
-/*   Updated: 2023/04/12 21:41:14 by edilson          ###   ########.fr       */
+/*   Updated: 2023/04/13 10:56:33 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-
-int	ft_putstr(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		ft_printchar(str[i]);
-		i++;
-	}
-	return (i);
-}
+#include "ft_printf.h"
 
 int	ft_type(va_list args, const char c)
 {
@@ -33,11 +20,11 @@ int	ft_type(va_list args, const char c)
 	if (c == 'c')
 		size += ft_printchar(va_arg(args, int));
 	if (c == 's')
-		size += ft_putstr(va_arg(args, char *));
+		size += ft_printstr(va_arg(args, char *));
 	if (c == 'p')
 	{
-		size += ft_putstr("0x");
-		size += ft_printhexa_min(va_arg(args, int));
+		size += ft_printstr("0x");
+		size += ft_printadd(va_arg(args, unsigned long int));
 	}
 	if (c == 'd')
 		size += ft_printnbr(va_arg(args, int));
@@ -46,9 +33,9 @@ int	ft_type(va_list args, const char c)
 	if (c == 'u')
 		size += ft_printnbrus(va_arg(args, unsigned int));
 	if (c == 'x')
-		size += ft_printhexa_min(va_arg(args, int));
+		size += ft_printhexa_min(va_arg(args, unsigned int));
 	if (c == 'X')
-		size += ft_printhexa_maj(va_arg(args, int));
+		size += ft_printhexa_maj(va_arg(args, unsigned int));
 	if (c == '%')
 		size += ft_printchar('%');
 	return (size);
@@ -82,10 +69,9 @@ int	ft_printf(const char *str, ...)
 
 int	main(void)
 {
-	int	i;
-	int	s;
+	void	*i;
 
-	i = 20155555;
-	s = 667;
-	printf("%%%");
+	i = (void *)-1;
+	printf("\n%d\n",printf("%p", i));
+	printf("\n%d\n",ft_printf("%p", i));
 }

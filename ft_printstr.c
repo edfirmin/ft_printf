@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printhexa_min.c                                 :+:      :+:    :+:   */
+/*   ft_printstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/11 17:14:00 by edfirmin          #+#    #+#             */
-/*   Updated: 2023/04/13 10:38:55 by edfirmin         ###   ########.fr       */
+/*   Created: 2023/04/13 09:57:49 by edfirmin          #+#    #+#             */
+/*   Updated: 2023/04/13 10:42:46 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printhexa_min(unsigned int n)
+int	ft_printstr(char *str)
 {
-	int		i;
-	char	*base;
+	int	i;
 
 	i = 0;
-	base = "0123456789abcdef";
-	if (n >= 16)
+	if (str == NULL)
+		str = "(null)";
+	while (str[i])
 	{
-		i = ft_printhexa_min(n / 16);
-		ft_printchar(base[n % 16]);
+		ft_printchar(str[i]);
+		i++;
 	}
-	else
-		ft_printchar(base[(n % 16)]);
-	return (i + 1);
+	return (i);
 }

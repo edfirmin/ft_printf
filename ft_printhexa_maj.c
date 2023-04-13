@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printhexa_maj.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edilson <edilson@student.42.fr>            +#+  +:+       +#+        */
+/*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 21:23:39 by edilson           #+#    #+#             */
-/*   Updated: 2023/04/12 21:26:13 by edilson          ###   ########.fr       */
+/*   Updated: 2023/04/13 10:15:14 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-int	ft_printhexa_maj(int n)
+int	ft_printhexa_maj(unsigned int n)
 {
 	int		i;
 	char	*base;

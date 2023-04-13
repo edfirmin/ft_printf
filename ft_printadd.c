@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printhexa_min.c                                 :+:      :+:    :+:   */
+/*   ft_printadd.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/11 17:14:00 by edfirmin          #+#    #+#             */
-/*   Updated: 2023/04/13 10:38:55 by edfirmin         ###   ########.fr       */
+/*   Created: 2023/04/13 10:18:13 by edfirmin          #+#    #+#             */
+/*   Updated: 2023/04/13 10:31:05 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printhexa_min(unsigned int n)
+int	ft_printadd(unsigned long int n)
 {
 	int		i;
 	char	*base;

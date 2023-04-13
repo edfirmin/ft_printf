@@ -6,11 +6,11 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 16:56:25 by edfirmin          #+#    #+#             */
-/*   Updated: 2023/04/11 17:03:43 by edfirmin         ###   ########.fr       */
+/*   Updated: 2023/04/13 09:21:27 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_printchar(const char c)
 {
