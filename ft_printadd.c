@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 10:18:13 by edfirmin          #+#    #+#             */
-/*   Updated: 2023/04/13 10:31:05 by edfirmin         ###   ########.fr       */
+/*   Updated: 2023/04/13 11:40:30 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_printadd(unsigned long int n)
 	base = "0123456789abcdef";
 	if (n >= 16)
 	{
-		i = ft_printhexa_min(n / 16);
+		i = ft_printadd(n / 16);
 		ft_printchar(base[n % 16]);
 	}
 	else

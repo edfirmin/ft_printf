@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 16:51:28 by edfirmin          #+#    #+#             */
-/*   Updated: 2023/04/13 10:13:06 by edfirmin         ###   ########.fr       */
+/*   Updated: 2023/04/13 11:05:52 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ static int	size_str(int n)
 
 int	ft_printnbr(int nbr)
 {
-	int	i;
+	int	size;
 
-	i = nbr;
+	size = nbr;
 	if (nbr == -2147483648)
 	{
 		write(1, "-2147483648", 11);
@@ -58,5 +58,5 @@ int	ft_printnbr(int nbr)
 	}
 	else
 		ft_printchar(nbr % 10 + '0');
-	return (size_str(i));
+	return (size_str(size));
 }

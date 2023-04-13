@@ -6,7 +6,7 @@
 /*   By: edfirmin <edfirmin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 14:01:51 by edfirmin          #+#    #+#             */
-/*   Updated: 2023/04/13 10:56:33 by edfirmin         ###   ########.fr       */
+/*   Updated: 2023/04/13 11:40:43 by edfirmin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,11 +67,11 @@ int	ft_printf(const char *str, ...)
 	return (size);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	void	*i;
 
 	i = (void *)-1;
 	printf("\n%d\n",printf("%p", i));
 	printf("\n%d\n",ft_printf("%p", i));
-}
+}*/
